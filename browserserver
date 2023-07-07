@@ -1,0 +1,28 @@
+following along with this below youtube video to see Next 13.4.9 routing in example.
+https://www.youtube.com/watch?v=gQDzu7lmtfM
+
+routing for Next.js 13.0:
+pages routing:      /pages                      /pages/api        
+
+routing for Next.js 13.4.9:
+app routing (server components routing)
+i.e.
+
+app/page.tsx -->
+
+export default function Home () {
+👍     console.log("hi guys");                 // this log doesn't get rendered by browser logs it gets rendered by server logs.
+}
+being server components, these logs don't show up in the browser, they show up in the console.
+If it's not already done, it would be a nice idea to make an npm i that takes server logs, and if they're encapsulated by a:
+browser.log() consoel.log("this would be in the server but it's wrapped by browser.logEnd() so it appears in server and client);  browser.logEnd() 
+
+// similar to console.group()
+
+This parent wrapper would check the server logs and put those logs into the google chrome browser.
+
+
+// if this does get created and isn't just a repetition of storing idea, this was originally going to be hypothetically called browserLogger but browserServer has a wait staff feel to it
+// as if to make a pun or insinuation out of the server bringing those logs on a plate from the back end of house to the front end of house. From server to client as a server.
+
+(literally 3 am idea while hearing gentleman on tutorial video mention that the logs don't go to client. Just trying to fix issue #2 of repo "next-water-app" to document where simple idea came from)
